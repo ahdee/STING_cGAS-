@@ -1,0 +1,63 @@
+---
+title: "RNAseq, STING1/cGAS"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+html_document:
+toc: TRUE
+toc_float: FALSE
+editor_options: 
+  chunk_output_type: console
+chunk_output_type: console
+---
+
+
+<style type="text/css">
+.main-container {
+max-width: 2500px;
+margin-left: 5px;
+margin-right: auto;
+}
+.toc-content {
+max-width: 2500px;
+margin-left: 50px;
+margin-right: auto;
+}
+
+div {
+
+margin-left: 5px;
+}
+
+
+hr.new1 {
+border-top: 1px solid #84a8e0;
+}
+
+
+</style>
+
+version: 1.0 <br />
+Run at "`r format(Sys.time())`"
+
+# Data {.tabset}
+
+## Overview/Method:
+
+
+### Goals: Identify upregulated/downregulated genes associated with STING activation in human cell lines OS052, OS152, OS186. 
+
+* Determine if there is a difference in baseline upregulated/downregulated genes among the 3 human osteosarcoma cell lines. 
+* Determine if there is a difference between untreated cells and cells treated with a STING agonist (diABZI). 
+* Genes of interest for future investigation will play some role in cGAS/STING pathway or play immunosuppressive roles. Previous western blot and qPCR data supports that treatment with a STING agonist has differential effects on downstream effectors of the cGAS/STING pathway. Another area of interest is whether the cell lines show canonical or non-canonical STING pathway signaling; ISG15, IFN-β, CXCL-10 are upregulated in the canonical pathway whereas non-canonical signaling demonstrates upregulation of STAT1 and NFKβ. It is possible that these IFN-related genes are actually not being expressed as a result of STING activation in some OS cells, and there are other downstream targets that will be revealed with pathway enrichment analysis.
+
+### Method 
+
+* DEG for each cell line independently, So 3 all together.
+  + OS052 control vs OS052 +diABZI (5µM)
+  + OS186 vs OS186 +diABZI (5µM)
+  + OS052 vs OS152 +diABZI (5µM)
+  + additional ( all control vs all +diABZI (5µM) 
+
+
+
+
